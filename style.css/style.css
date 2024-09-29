@@ -391,7 +391,6 @@ border-radius: 100%;
 }
  
 .recall-name-text {
-
 font-weight: 400;
 font-size: 14px;
 
@@ -403,7 +402,8 @@ color: #2c2c2c;}
   gap: 16px;
  border-right: 1px solid #7eb101;
  max-width: 160px;
- padding-right: 16px;
+ align-items: center;
+
 }
 
 .user-text-wrap {
