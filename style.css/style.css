@@ -635,7 +635,7 @@ img {
 
 /* MODAL OVERLEY */
 
-.modal-overaly {
+.modal-overlay {
   background: rgba(94, 99, 99, 0.7);
   position: fixed;
   top: 0;
@@ -646,15 +646,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* opacity: 0;
-  pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* .modal-overley.is-open {
+.modal-overlay.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-} */
+}
 
 .overlay {
   padding: 32px;
@@ -726,7 +726,7 @@ img {
   color: #c4c4c4;
 }
 
-.review-input:focus{
+.review-input:focus {
   outline: none;
   border-color: 2px solid #7eb101;
 }
@@ -735,22 +735,50 @@ img {
   color: #c4c4c4;
 }
 
+/* стилізація інпута при не валідному значенні */
+.inp:not(:placeholder-shown):invalid {
+  border-color: #ff705d;
+}
+
+/* стилізація інпута при валідному значенні */
+.inp:not(:placeholder-shown):valid {
+  border-color: #7eb101;
+}
+
+.text-invalid {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #ff705d;
+  margin-bottom: 12px;
+  display: none;
+}
+
+.inp:not(:placeholder-shown):valid ~ .text-valid {
+  display: block;
+}
+
+.inp:not(:placeholder-shown):invalid ~ .text-invalid {
+  display: block;
+}
+
 .send-btn {
-border: 2px solid #7eb101;
+  border: 2px solid #7eb101;
   border-radius: 30px;
   padding: 10px 20px;
   width: 106px;
   height: 40px;
   background: #fff;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 1.5;
-        color: #2c2c2c;
-        display: block;
-margin: 0 auto;
-cursor: pointer;
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .send-btn:hover,

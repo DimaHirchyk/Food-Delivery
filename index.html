@@ -41,7 +41,7 @@
   <main>
     <!-- SECTION 1 -->
 
-    <section class="hero-section">
+    <section class="hero-section is-open">
       <div class="container hero-container">
         <div class="hero-title">
           <h1 class="title">Enjoy Your Favorite Food From Anywhere</h1>
@@ -51,7 +51,7 @@
             enjoy a hassle-free and delicious meal from the comfort of your
             own home.
           </p>
-          <button type="button" class="button-main">Order Now</button>
+          <button type="button" class="button-main" data-modal-open>Order Now</button>
         </div>
         <img src="./image/salad.png" alt="salat" width="528" height="528" class="img-hero" />
       </div>
@@ -298,7 +298,9 @@
         <form class="cont-form">
           <p class="word-subcribe">Subscribe</p>
           <div class="input-footer-cont">
-            <input class="input-footer" type="email" placeholder="Enter your email" required />
+            <input class="input-footer inp" type="email"
+            placeholder="Enter your email" required />
+            <p class="text-invalid">Not a valid email address (example@email.com)</p>
             <button class="footer-btn" type="submit">Subscribe</button>
           </div>
           <p class="from-text-privat">
@@ -319,9 +321,9 @@
   </footer>
 
   <!-- MODAL OVERLAY -->
-<div class="modal-overaly is-open">
+<div class="modal-overlay" data-modal>
   <div class="overlay">
-    <button class="close-ctn" type="button">
+    <button class="close-ctn" type="button" data-modal-close>
       <svg class="icon-close" width="10" height="10">
       <use href="./image/sprite.svg#icon-close"></use>
     </svg></button>
@@ -337,7 +339,7 @@
       </div>
       <div class="label-input">
         <label class="form-field-label" for="user-phone">Phone number</label>
-          <input class="review-input" type="number" 
+          <input class="review-input" type="tel" 
           name="user-phone" 
           placeholder="+38(0_ _) _ _ _   _ _   _ _"
           required>
@@ -353,6 +355,8 @@
     </form>
   </div>
 </div>
+ 
+  <script src="./js/modal.js"></script>
 
 </body>
 </html>
