@@ -64,11 +64,11 @@
     <section class="aple-section">
       <div class="container aple-container">
         <div class="about-img-border">
-        <div class="image-wrapper">
+          <div class="image-wrapper">
             <div class="shadow"></div>
-          <img class="apple-img" src="./image/aple-min.png" alt="apple" width="396" height="502"/>
+            <img class="apple-img" src="./image/aple-min.png" alt="apple" width="396" height="502" />
+          </div>
         </div>
-      </div>
         <div class="main-aple">
           <h2 class="title-aple">What’s Special About Our Offerings</h2>
           <p class="text-aple">
@@ -271,7 +271,7 @@
         </p>
         <div class="banana-subscribe-form">
           <form class="banana-form">
-            <input class="banana-form-input" type="email" placeholder="Enter your email" required />
+            <input class="banana-form-input inp" type="email" placeholder="Enter your email" required />
             <button class="banana-form-btn" type="submit">Subscribe</button>
           </form>
         </div>
@@ -294,13 +294,15 @@
         <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" href="">Menu</a></li>
         <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" href="">Contact</a></li>
       </ul>
-      <div>
+      <div class="">
         <form class="cont-form">
           <p class="word-subcribe">Subscribe</p>
           <div class="input-footer-cont">
-            <input class="input-footer inp" type="email"
-            placeholder="Enter your email" required />
-            <p class="text-invalid">Not a valid email address (example@email.com)</p>
+            <div class="forma">
+              <input class="input-footer inp" type="email" placeholder="Enter your email" required />
+              <p class="text-invalid">
+               <svg class="inp-icon" width="12" height="12"><use href="./image/symbol-defs.svg#icon-Frame"></use></svg> Not a valid email address (example@email.com)</p>
+            </div>
             <button class="footer-btn" type="submit">Subscribe</button>
           </div>
           <p class="from-text-privat">
@@ -321,42 +323,34 @@
   </footer>
 
   <!-- MODAL OVERLAY -->
-<div class="modal-overlay" data-modal>
-  <div class="overlay">
-    <button class="close-ctn" type="button" data-modal-close>
-      <svg class="icon-close" width="10" height="10">
-      <use href="./image/sprite.svg#icon-close"></use>
-    </svg></button>
-    <p class="title-form">Order Form</p>
-    <form>
-      <div class="label-input">
-        <label class="form-field-label" for="user-name">Name</label>
-          <input class="review-input" type="text" 
-          name="user-name" 
-          placeholder="Your name"
-          required
-          >
-      </div>
-      <div class="label-input">
-        <label class="form-field-label" for="user-phone">Phone number</label>
-          <input class="review-input" type="tel" 
-          name="user-phone" 
-          placeholder="+38(0_ _) _ _ _   _ _   _ _"
-          required>
-      </div>
-      <div class="label-input">
-        <label class="form-field-label" for="user-email">E-mail</label>
-          <input class="review-input" type="email" 
-          name="user-email" 
-          placeholder="example@gmail.com"
-          required>
-      </div>
-      <button class="send-btn" type="submit">Send</button>
-    </form>
+  <div class="modal-overlay" data-modal>
+    <div class="overlay">
+      <button class="close-ctn" type="button" data-modal-close>
+        <svg class="icon-close" width="10" height="10">
+          <use href="./image/sprite.svg#icon-close"></use>
+        </svg></button>
+      <p class="title-form">Order Form</p>
+      <form>
+        <div class="label-input">
+          <label class="form-field-label" for="user-name">Name</label>
+          <input class="review-input" type="text" name="user-name" placeholder="Your name" required>
+        </div>
+        <div class="label-input">
+          <label class="form-field-label" for="user-phone">Phone number</label>
+          <input class="review-input" type="tel" name="user-phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" required>
+        </div>
+        <div class="label-input">
+          <label class="form-field-label" for="user-email">E-mail</label>
+          <input class="review-input inp" type="email" name="user-email" placeholder="example@gmail.com" required>
+          <p class="text-invalid-overlay">Not a valid email address (example@email.com)</p>
+        </div>
+        <button class="send-btn" type="submit">Send</button>
+      </form>
+    </div>
   </div>
-</div>
- 
+
   <script src="./js/modal.js"></script>
 
 </body>
+
 </html>

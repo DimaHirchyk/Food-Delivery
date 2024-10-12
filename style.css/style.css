@@ -518,7 +518,6 @@ img {
 
 .footer-nav {
   display: flex;
-  justify-content: space-between;
 }
 
 .footer-nav-list {
@@ -538,6 +537,11 @@ img {
 
 .cont-form {
   display: block;
+  margin-left: 320px;
+}
+
+.input-footer-cont {
+  display: flex;
 }
 
 .word-subcribe {
@@ -569,6 +573,25 @@ img {
   border-color: #7eb101;
 }
 
+.forma {
+  display: block;
+  position: relative;
+}
+
+.text-invalid {
+  position: absolute;
+  top: 50px; /* Приклад значення, змініть за потреби */
+  left: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #ff705d;
+  margin-bottom: 12px;
+  display: none;
+}
+
 .footer-btn {
   margin-left: 16px;
   border: 2px solid #7eb101;
@@ -581,6 +604,10 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.inp-icon {
+  color: #ff705d;
+}
+
 .footer-btn:hover,
 .footer-btn:focus {
   border-color: #ffe450;
@@ -589,7 +616,7 @@ img {
 .from-text-privat {
   font-weight: 400;
   font-size: 12px;
-  margin-bottom: 80px;
+  margin-bottom: auto;
 }
 
 .link-pvat {
@@ -601,6 +628,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 80px;
 }
 .privat-policy-list {
   display: flex;
@@ -701,6 +729,7 @@ img {
 }
 
 .label-input {
+  position: relative;
 }
 
 .form-field-label {
@@ -745,7 +774,19 @@ img {
   border-color: #7eb101;
 }
 
-.text-invalid {
+. .inp:not(:placeholder-shown):valid ~ .text-valid {
+  display: block;
+}
+
+.inp:not(:placeholder-shown):invalid ~ .text-invalid {
+  display: block;
+}
+
+.text-invalid-overlay {
+  position: absolute;
+  top: 50px; /* Приклад значення, змініть за потреби */
+  left: 0;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 10px;
@@ -753,14 +794,6 @@ img {
   color: #ff705d;
   margin-bottom: 12px;
   display: none;
-}
-
-.inp:not(:placeholder-shown):valid ~ .text-valid {
-  display: block;
-}
-
-.inp:not(:placeholder-shown):invalid ~ .text-invalid {
-  display: block;
 }
 
 .send-btn {
