@@ -20,9 +20,18 @@
 <body>
   <!-- HEADER -->
 
-  <header class="header">
+  <header class="header ">
     <div class="container header-container">
-      <a href="./index.html" class="header-logo"><img src="./image/logo.jpg" alt="Logo" width="66" height="52" /></a>
+      <a href="./index.html" class="header-logo">
+        <picture>
+          <source srcset="./image/logo.jpg 1x, ./image/logo-x2.jpg 2x" media="(min-width: 1px)">
+          <img  src="./image/logo.jpg" 
+             alt="Logo" 
+             width="66" 
+             height="52" />
+        </picture>
+        
+    </a>
       <nav class="navigation">
         <ul class="nav-list">
           <li><a href="./index.html" class="nav-link">Home</a></li>
@@ -32,7 +41,10 @@
           <li><a href="" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <button type="button" class="button-main">Order Now</button>
+      <button type="button" class="button-main-header">Order Now</button>
+      <svg class="burger-icon" width="28" height="28">
+      <use href="./image/icons/burger.svg#icon-burger">
+      </use></svg>
     </div>
   </header>
 
@@ -41,7 +53,7 @@
   <main>
     <!-- SECTION 1 -->
 
-    <section class="hero-section is-open">
+    <section class="hero-section is-open ">
       <div class="container hero-container">
         <div class="hero-title">
           <h1 class="title">Enjoy Your Favorite Food From Anywhere</h1>
@@ -53,7 +65,18 @@
           </p>
           <button type="button" class="button-main" data-modal-open>Order Now</button>
         </div>
-        <img src="./image/salad.png" alt="salat" width="528" height="528" class="img-hero" />
+        <div class="tabl-foto">
+          <button class="tabl-left-btn"><svg class="tabl-icon" width="20" height="11">
+          <use href="./image/icons/tablet-btb.svg#icon-left-icon">
+          </use></svg></button>
+        <img src="./image/Foto.jpg" class="img-hero" 
+        alt="salat" width="292" height="292"/>
+        <button class="tabl-right-btn"><svg class="tabl-icon" width="20" height="11">
+          <use href="./image/icons/tablet-btb.svg#icon-right-icon">
+          </use></svg></button>
+      </div>
+        <img src="./image/salad.jpg" class="img-hero-salat" 
+        alt="salat" width="528" height="528"/>
       </div>
     </section>
 
@@ -65,8 +88,14 @@
       <div class="container aple-container">
         <div class="about-img-border">
           <div class="image-wrapper">
-            <div class="shadow"></div>
-            <img class="apple-img" src="./image/aple-min.png" alt="apple" width="396" height="502" />
+            <div class="shadow">
+              <picture>
+                <source srcset="../image/aple-min-desc.webp 1x, ../image/aple-min-desc-x2.webp 2x" media="(min-width: 1280px)" >
+                <source srcset="../image/aple-min-tabl.jpg 1x, ../image/aple-min-tabl-x2.jpg 2x" media="(min-width: 768px)" >
+                <source srcset="../image/aple-min-mob.jpg 1x, ../image/aple-min-mob-x2.jpg 2x" media="(max-width: 767px)" >
+                <img class="apple-img" src="./image/aple-min-desc.webp" alt="apple" width="396" height="502" />
+              </picture>
+            </div>
           </div>
         </div>
         <div class="main-aple">
@@ -104,6 +133,9 @@
             </li>
           </ul>
           <button type="button" class="aple-button">Order Now</button>
+          <button type="button" class="read-more">Read More<svg class="rear-icon" width="6" height="10">
+            <use href="./image/icons/tablet-btb.svg#icon-right-icon">
+            </use></svg></button>
         </div>
       </div>
     </section>
@@ -119,41 +151,69 @@
         <ul class="menu-item">
           <li class="menu-list">
             <div>
-              <a href="" class="menu-link"><img src="./image/dishes/gamburger-min.png" alt="gamburger" width="315"
-                  class="img-menu" /></a>
-            </div>
-          </li>
-          <li class="menu-list">
-            <div>
-              <a href="" class="menu-link"><img src="./image/dishes/pasta-min.png" alt="pasta" width="315"
+              <a href="" class="menu-link">
+                <picture>
+                <source srcset="./image/dishes/desck/gamburger-1-min.png 1x, ./image/dishes/desck/gamburger-min.png 2x" media="(min-width: 1280px)" >
+                <source srcset="./image/dishes/tablet/gamburger-min.png 1x, ./image/dishes/tablet/gamburger@2x-min.png 2x" media="(min-width: 768px)" >
+                <source srcset="./image/dishes/mob/gamburger-min.png 1x, ./image/dishes/mob/gamburger@2x-min.png 2x" media="(max-width: 767px)" >
+                <img src="./image/dishes/desck/gamburger-1-min.png" alt="gamburger" width="315"
                   class="img-menu" />
+                </picture>
+                </a>
+            </div>
+          </li>
+          <li class="menu-list">
+            <div>
+              <a href="" class="menu-link">
+                <picture>
+                <source srcset="./image/dishes/desck/Pasta-1-min.png 1x, ./image/dishes/desck/Pasta-min.png 2x" media="(min-width: 1280px)" >
+                <source srcset="./image/dishes/tablet/Pasta-min.png 1x, ./image/dishes/tablet/Pasta@2-min.png 2x" media="(min-width: 768px)" >
+                <source srcset="./image/dishes/mob/Pasta-min.png 1x, ./image/dishes/mob/Pasta@2-min.png 2X" media="(max-width: 767px)" >
+                <img src="./image/dishes/desck/Pasta-1-min.png" alt="pasta" width="315"
+                  class="img-menu" /></picture>
               </a>
             </div>
           </li>
           <li class="menu-list">
             <div>
               <a href="" class="menu-link">
-                <img src="./image/dishes/pizza-min.png" alt="pizza" width="315" class="img-menu" />
+                <picture>
+                <source srcset="./image/dishes/desck/pizza-1-min.png 1x, ./image/dishes/desck/pizza-min.png 2x" media="(min-width: 1280px)" >
+                <source srcset="./image/dishes/tablet/pizza-min.png 1x, ./image/dishes/tablet/pizza@2-min.png 2x" media="(min-width: 768px)" >
+                <source srcset="./image/dishes/mob/pizza-min.png 1x, ./image/dishes/mob/pizza@2-min.png 2x" media="(max-width: 767px)" >
+                <img src="./image/dishes/desck/pizza-1-min.png" alt="pizza" width="315" class="img-menu" /></picture>
+              </a>
+            </div>
+          </li>
+          <li class="menu-list ">
+            <div>
+              <a href="" class="menu-link menu-block">
+                <picture>
+                <source srcset="./image/dishes/desck/chicken-1-min.png 1x, ./image/dishes/desck/chicken-min.png 2x" media="(min-width: 1280px)" >
+                <source srcset="./image/dishes/tablet/chicken-min.png 1x, ./image/dishes/tablet/chicken@2-min.png 2x" media="(min-width: 768px)" >
+                <img src="./image/dishes/desck/chicken-1-min.png" alt="chicken" width="315" class="img-menu" /></picture>
+              </a>
+            </div>
+          </li>
+          <li class="menu-list ">
+            <div>
+              <a href="" class="menu-link menu-block">
+                <picture>
+                <source srcset="./image/dishes/desck/salat-1-min.png 1x, ./image/dishes/desck/salat-min.png 2x" media="(min-width: 1280px)" >
+                <source srcset="./image/dishes/tablet/salat-min.png 1x, ./image/dishes/tablet/salat@2-min.png 2x" media="(min-width: 768px)" >
+                <img src="./image/dishes/desck/salat-1-min.png" alt="salat" width="315" class="img-menu" /></picture>
               </a>
             </div>
           </li>
           <li class="menu-list">
             <div>
-              <a href="" class="menu-link">
-                <img src="./image/dishes/chicken-min.png" alt="chicken" width="315" class="img-menu" /></a>
-            </div>
-          </li>
-          <li class="menu-list">
-            <div>
-              <a href="" class="menu-link">
-                <img src="./image/dishes/salat-min.png" alt="salat" width="315" class="img-menu" />
-              </a>
-            </div>
-          </li>
-          <li class="menu-list">
-            <div>
-              <a href="" class="menu-link"><img src="./image/dishes/borshch-min.png" alt="borsch" width="315"
-                  class="img-menu" /></a>
+              <a href="" class="menu-link menu-block">
+                <picture>
+                <source srcset="./image/dishes/desck/borshch-1-min.png 1x, ./image/dishes/desck/borshch-min.png 2x" media="(min-width: 1280px)" >
+                <source srcset="./image/dishes/tablet/borshch-min.png 1x, ./image/dishes/tablet/borshch@2-min.png 2x" media="(min-width: 768px)" >
+                <img src="./image/dishes/desck/borshch-1-min.png" alt="borsch" width="315"
+                  class="img-menu" /></picture>
+                </a>
             </div>
           </li>
         </ul>
@@ -171,6 +231,7 @@
           Don't just take our word for it - see what our satisfied customers
           have to say
         </p>
+        <p class="mob-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <ul class="recall-item">
           <li class="recall-list">
             <ul class="star-item">
@@ -206,7 +267,7 @@
               questions asked”
             </p>
             <div class="user-recall">
-              <img src="./image/coment-people/men.png" alt="Sumith Shah" width="48" />
+              <img src="./image/coment-people/men.jpg" alt="Sumith Shah" width="48" />
               <div class="user-text-wrap">
                 <h4 class="recall-name">Sumith Shah</h4>
                 <p class="recall-name-text">Some Dude</p>
@@ -247,7 +308,7 @@
               questions asked”
             </p>
             <div class="user-recall">
-              <img src="./image/coment-people/men.png" alt="Sumith Shah" width="48" />
+              <img src="./image/coment-people/girl.jpg" alt="Sumith Shah" width="48" />
               <div class="user-text-wrap">
                 <h4 class="recall-name">Sumith Shah</h4>
                 <p class="recall-name-text">Some Dude</p>
@@ -262,7 +323,7 @@
 
     <!-- SECTION 5 -->
 
-    <section class="container sect-banana">
+    <section class="container sect-banana ">
       <div class="banana-block">
         <h3 class="banana-title">Subscribe To Get Special Offers</h3>
         <p class="banana-text">
@@ -276,7 +337,11 @@
           </form>
         </div>
       </div>
-      <img src="./image/banan-min.png" alt="banan" width="608" height="266" />
+      <picture>
+      <source srcset="./image/banan-min-desc.jpg 1x, ./image/banan-min-desc-x2.jpg 2x" media="(min-width: 1280px)" >
+      <source srcset="./image/banan-min-tabl.jpg 1x, ./image/banan-min-tabl-x2.jpg 2x" media="(min-width: 768px)" >
+      <source srcset="./image/banan-min-mobl.jpg 1x, ./image/banan-min-mobl-x2.jpg 2x" media="(max-width: 767px)" >
+      <img class="banan-foto" src="./image/banan-min-desc.jpg" alt="banan" width="608" height="266" /></picture>
     </section>
   </main>
 
@@ -286,7 +351,11 @@
 
   <footer class="container footer-cont">
     <div class="footer-nav">
-      <a href="index.html"><img src="./image/logo.jpg" alt="logo" width="66" height="52" /></a>
+      <a href="index.html">
+        <picture>
+          <source srcset="./image/logo.jpg 1x, ./image/logo-x2.jpg 2x" media="(min-width: 1px)">
+<img class="footer-logo" src="./image/logo.jpg" alt="logo" width="69" height="51"/></a>
+        </picture>
       <ul class="footer-nav-list">
         <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" href="">Home</a></li>
         <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" href="">About</a></li>
@@ -301,7 +370,9 @@
             <div class="forma">
               <input class="input-footer inp" type="email" placeholder="Enter your email" required />
               <p class="text-invalid">
-               <svg class="inp-icon" width="12" height="12"><use href="./image/symbol-defs.svg#icon-Frame"></use></svg> Not a valid email address (example@email.com)</p>
+               <svg class="inp-icon" width="12" height="12">
+                <use href="./image/symbol-defs.svg#icon-Frame"></use>
+              </svg> Not a valid email address (example@email.com)</p>
             </div>
             <button class="footer-btn" type="submit">Subscribe</button>
           </div>
@@ -319,11 +390,10 @@
       </ul>
       <p class="text-foodsta">2022 FoodSta. All right reserved.</p>
     </div>
-    <img class="fruit-futer" src="./image/Fruit Futer .png" alt="Fruit">
-  </footer>
+    </footer>
 
   <!-- MODAL OVERLAY -->
-  <div class="modal-overlay" data-modal>
+  <div class="modal-overlay hidden" data-modal>
     <div class="overlay">
       <button class="close-ctn" type="button" data-modal-close>
         <svg class="icon-close" width="10" height="10">
