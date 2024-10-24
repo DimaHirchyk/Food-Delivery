@@ -59,8 +59,7 @@ li {
 /*            HEADER */
 
 .header {
-  box-shadow: 0 4px 24px 0
-    rgba(105, 105, 105, 0.1);
+  box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
   background: #fefefe;
 }
 
@@ -147,8 +146,7 @@ li {
   }
 
   .nav-link {
-    transition: color 250ms
-        cubic-bezier(0.4, 0, 0.2, 1),
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       font-weight 0.3s ease;
     color: #2c2c2c;
   }
@@ -198,8 +196,7 @@ li {
   font-size: 13px;
   line-height: 1.5;
   color: #2c2c2c;
-  transition: background 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tabl-foto {
@@ -274,8 +271,7 @@ li {
     border: none;
     border-radius: 4px;
     background-color: #fff;
-    box-shadow: 0 4px 4px 0
-      rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
   }
 
   .tabl-icon {
@@ -296,8 +292,7 @@ li {
     border: none;
     border-radius: 4px;
     background-color: #fff;
-    box-shadow: 0 4px 4px 0
-      rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -367,12 +362,6 @@ li {
   margin-bottom: 60px;
 }
 
-@media screen and (min-resolution: 192dpi) {
-  .apple-img {
-    background-image: url(../image/aple-min-mob-x2.jpg);
-  }
-}
-
 .title-aple {
   font-weight: 700;
   font-size: 28px;
@@ -435,12 +424,6 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  @media screen and (min-resolution: 192dpi) {
-    .apple-img {
-      background-image: url(../image/aple-min-tabl-x2.jpg);
-    }
-  }
-
   .aple-container {
     margin-bottom: 191px;
   }
@@ -495,8 +478,7 @@ li {
     width: 550px;
     height: 550px;
     border-radius: 100%;
-    border: 5px solid
-      rgba(255, 255, 255, 0.5);
+    border: 5px solid rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,11 +490,6 @@ li {
     z-index: 1;
     margin-left: 0;
     margin-top: 0;
-  }
-  @media screen and (min-resolution: 192dpi) {
-    .apple-img {
-      background-image: url(../image/aple-min-desc-x2.webp);
-    }
   }
 
   .read-more {
@@ -663,7 +640,7 @@ li {
 
 /*                 SECTION 4 --> */
 
- {
+.recall-container {
   max-width: 320px;
 }
 
@@ -1035,13 +1012,11 @@ li {
   border-color: #7eb101;
 }
 
-.inp:not(:placeholder-shown):valid
-  ~ .text-valid {
+.inp:not(:placeholder-shown):valid ~ .text-valid {
   display: block;
 }
 
-.inp:not(:placeholder-shown):invalid
-  ~ .text-invalid {
+.inp:not(:placeholder-shown):invalid ~ .text-invalid {
   display: block;
 }
 
