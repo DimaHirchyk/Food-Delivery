@@ -109,7 +109,8 @@
               srcset="./image/Foto.jpg 1x, ./image/Foto 1@2x-min.jpg 2x"
               alt="salat"
               width="292"
-              height="292" />
+              height="292"
+              loading="lazy" />
             <button class="tabl-right-btn">
               <svg class="tabl-icon" width="20" height="11">
                 <use
@@ -124,6 +125,7 @@
               ./image/salad.jpg    1x,
               ./image/salad-x2.jpg
             "
+            loading="lazy"
             alt="salat"
             width="528"
             height="528" />
@@ -163,7 +165,8 @@
                     src="./image/aple-min-desc.webp"
                     alt="apple"
                     width="396"
-                    height="502" />
+                    height="502"
+                    loading="lazy" />
                 </picture>
               </div>
             </div>
@@ -329,9 +332,9 @@
                 </a>
               </div>
             </li>
-            <li class="menu-list">
+            <li class="menu-list menu-block">
               <div>
-                <a href="" class="menu-link menu-block">
+                <a href="" class="menu-link">
                   <picture>
                     <source
                       srcset="
@@ -354,9 +357,9 @@
                 </a>
               </div>
             </li>
-            <li class="menu-list">
+            <li class="menu-list menu-block">
               <div>
-                <a href="" class="menu-link menu-block">
+                <a href="" class="menu-link">
                   <picture>
                     <source
                       srcset="
@@ -379,9 +382,9 @@
                 </a>
               </div>
             </li>
-            <li class="menu-list">
+            <li class="menu-list menu-block">
               <div>
-                <a href="" class="menu-link menu-block">
+                <a href="" class="menu-link">
                   <picture>
                     <source
                       srcset="
@@ -621,21 +624,18 @@
 
     <footer class="container footer-cont">
       <div class="footer-nav">
-        <a href="index.html">
-          <picture>
-            <source
-              srcset="
-                ./image/logo.jpg    1x,
-                ./image/logo-x2.jpg 2x
-              "
-              media="(min-width: 1px)" />
-            <img
-              class="footer-logo"
-              src="./image/logo.jpg"
-              alt="logo"
-              width="69"
-              height="51" /> </picture
-        ></a>
+        <a class="footer-logo" href="index.html">
+          <img
+            class="footer-logo"
+            src="./image/logo.jpg"
+            alt="logo"
+            width="69"
+            height="51"
+            srcset="
+              ./image/logo.jpg    1x,
+              ./image/logo-x2.jpg 2x
+            "
+        /></a>
 
         <ul class="footer-nav-list">
           <li class="footer-nav-list-item">
