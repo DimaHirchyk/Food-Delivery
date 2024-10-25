@@ -1029,6 +1029,11 @@ li {
   display: block;
 }
 
+.inp:invalid ~ .text-invalid + .from-text-privat {
+  position: absolute;
+  margin-top: 50px;
+}
+
 .text-invalid-overlay {
   position: absolute;
   top: 50px; /* Приклад значення, змініть за потреби */
@@ -1124,7 +1129,11 @@ li {
   }
 
   .footer-logo {
-    margin-right: 130px;
+    margin-right: auto;
+  }
+
+  .cont-logo {
+    gap: 130px;
   }
 
   .cont-form {
@@ -1156,6 +1165,11 @@ li {
 
   .from-text-privat {
     margin-bottom: 0;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
   }
 
   .footer-nav {
